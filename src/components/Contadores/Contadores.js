@@ -11,14 +11,24 @@ class Contadores extends Component {
     };
 
     renderizarContadores = () => {
+        console.log(this.state);
         return this.state.contadores.map( contador => {
             return <Contador 
                         titulo={contador.titulo} 
                         valor={contador.valor}
                         key={contador.id}
+                        id={contador.id}
+                        borrar={this.eliminarContador}
                     />
-        })
+        });
     };
+
+    eliminarContador = (idContador) => {
+        let contadoresActuales = this.state.contadores.filter( contador => {
+            return contador.id !== idContador
+        });
+        this.setState({ contadores: contadoresActuales });
+    }
 
     render() { 
         return ( 

@@ -5,6 +5,7 @@ class Contador extends Component {
     state = { 
         titulo: this.props.titulo,
         valor: this.props.valor,
+        id: this.props.id,
     };
 
     // componentDidMount(){
@@ -51,7 +52,9 @@ class Contador extends Component {
     };
 
     eliminarContador = () => {
-        console.log("Se elimina el contador...");
+        // console.log(this.props);
+        // this.props.eliminarContador()
+        this.props.borrar();
     };
 
     render() { 
@@ -78,7 +81,8 @@ class Contador extends Component {
                         -
                 </Button>
                 <Button 
-                    onClick={this.eliminarContador}
+                    // onClick={ (e) => this.props.borrar(e) }
+                    onClick={ () => this.props.borrar(this.state.id) }
                     className="ml-5" 
                     color="warning">
                         Eliminar
