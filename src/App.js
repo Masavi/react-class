@@ -1,12 +1,13 @@
 import React from 'react';
-import Contadores from './components/Contadores/Contadores';
+import Clima from './components/Clima/Clima';
 
 function App() {
   return (
     <div className="container">
       <br/>
-      <h1>Hola Mundo</h1>
-      <Contadores />
+      <h1>Estado del Tiempo</h1>
+      <br/>
+      <Clima />
     </div>
   );
 }
