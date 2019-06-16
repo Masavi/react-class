@@ -6,7 +6,9 @@ function App() {
     <div className="container">
       <br/>
       <h1>Hola Mundo</h1>
-      <Contador/>
+      <Contador 
+        titulo={"Gamma"} 
+        valor={10}/>
     </div>
   );
 }

@@ -3,9 +3,14 @@ import {Badge, Container, Button} from 'reactstrap';
 
 class Contador extends Component {
     state = { 
-        titulo: "Alpha",
-        valor: 7,
+        titulo: this.props.titulo,
+        valor: this.props.valor,
     };
+
+    // componentDidMount(){
+    //     console.log(this.state);
+    //     console.log(this.props);
+    // };
 
     incrementarContador = () => {
         this.setState({
@@ -45,6 +50,10 @@ class Contador extends Component {
         }
     };
 
+    eliminarContador = () => {
+        console.log("Se elimina el contador...");
+    };
+
     render() { 
         return ( 
             <Container style={{
@@ -68,7 +77,12 @@ class Contador extends Component {
                     color="danger">
                         -
                 </Button>
-                <Button className="ml-5" color="warning">Eliminar</Button>
+                <Button 
+                    onClick={this.eliminarContador}
+                    className="ml-5" 
+                    color="warning">
+                        Eliminar
+                </Button>
             </Container>
         );
     }
