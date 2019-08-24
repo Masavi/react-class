@@ -3,20 +3,25 @@ import { Badge, Button } from 'reactstrap';
 
 class Contador extends Component {
     state = { 
+        id: this.props.id,
         titulo: this.props.titulo,
         valor: this.props.valor,
     }
 
     incrementar = () => {
-        this.setState({
+        return this.setState({
             valor: this.state.valor + 1,
         });
     }
 
     decrementar = () => {
-        this.setState({
+        return this.setState({
             valor: this.state.valor - 1,
         });
+    }
+
+    eliminar = () => {
+        return this.props.eliminar(this.state.id);
     }
 
     renderValor = () => {
@@ -48,6 +53,10 @@ class Contador extends Component {
                     <Button 
                         onClick={this.decrementar}
                         color='danger'>-</Button>
+                    <Button 
+                        onClick={this.eliminar}
+                        className='ml-5'
+                        color='info'>eliminar</Button>
                 </div>
             </React.Fragment>
         );
