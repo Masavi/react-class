@@ -6,7 +6,8 @@ function App() {
   return (
     <Container className='mt-5'>
       <h1>Contadores</h1>
-      <Contador />
+      <Contador titulo='Bravo' valor={-2} />
+      <Contador titulo='Omega' valor={7} />
     </Container>
   );
 }

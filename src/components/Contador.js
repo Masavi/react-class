@@ -3,8 +3,8 @@ import { Badge, Button } from 'reactstrap';
 
 class Contador extends Component {
     state = { 
-        titulo: 'Alpha',
-        valor: 0,
+        titulo: this.props.titulo,
+        valor: this.props.valor,
     }
 
     incrementar = () => {
