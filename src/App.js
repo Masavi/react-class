@@ -1,8 +1,12 @@
 import React from 'react';
+import HolaMundo from './components/HolaMundo';
 
 function App() {
   return (
-    <h1>Hola Mundo</h1>
+    <React.Fragment>
+      <h1>Hola Mundo</h1>
+      <HolaMundo />
+    </React.Fragment>
   );
 }
 
