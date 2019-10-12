@@ -8,6 +8,17 @@ class Contador extends Component {
         numero: this.props.numero,
     }
 
+    incrementar = () => {
+        // FORMA ERRONEA DE MODIFICAR EL ESTADO
+        // this.state.numero = this.state.numero + 1;
+        // console.log(this.state);
+
+        // FORMA CORRECTA DE MODIFICAR EL ESTADO
+        this.setState({
+            numero: this.state.numero + 1,
+        });
+    }
+
     render() { 
         return (
             <Container className='mt-4 contador-div'>
@@ -19,6 +30,7 @@ class Contador extends Component {
                         </span>
                     </Badge>
                     <Button
+                        onClick={this.incrementar}
                         className='contador-margin' 
                         color='primary'>+</Button>
                     <Button
