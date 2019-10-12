@@ -1,0 +1,14 @@
+.contador-div {
+    width: 400px !important;
+    background-color: rgb(238, 193, 216);
+    padding-bottom: 20px;
+    border-radius: 15px;
+}
+
+.contador-num {
+    font-size: 2.5em;
+}
+
+.contador-margin {
+    margin-right: 10px;
+}

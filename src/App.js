@@ -1,19 +1,11 @@
 import React from 'react';
 import './App.css';
-import HolaMundo from './components/HolaMundo';
+import Contador from './components/Contador';
 
 function App() {
   return (
     <React.Fragment>
-      <h1>Hola desde App.js</h1>
-      <HolaMundo
-        pasatiempos='Aprender programación'
-        ocupacion='Emprendedor' 
-        nombre='Humberto'/>
-      <HolaMundo
-        pasatiempos='Fut'
-        ocupacion='Cree que desarrollador' 
-        nombre='Miguel'/>
+      <Contador />
     </React.Fragment>
   );
 }
