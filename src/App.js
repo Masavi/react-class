@@ -5,7 +5,7 @@ import Contador from './components/Contador';
 function App() {
   return (
     <React.Fragment>
-      <Contador />
+      <Contador titulo='Alpha' numero={0} />
     </React.Fragment>
   );
 }
