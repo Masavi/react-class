@@ -9,13 +9,14 @@ class Contador extends Component {
     }
 
     incrementar = () => {
-        // FORMA ERRONEA DE MODIFICAR EL ESTADO
-        // this.state.numero = this.state.numero + 1;
-        // console.log(this.state);
-
-        // FORMA CORRECTA DE MODIFICAR EL ESTADO
         this.setState({
             numero: this.state.numero + 1,
+        });
+    }
+
+    decrementar = () => {
+        this.setState({
+            numero: this.state.numero - 1,
         });
     }
 
@@ -34,6 +35,7 @@ class Contador extends Component {
                         className='contador-margin' 
                         color='primary'>+</Button>
                     <Button
+                        onClick={this.decrementar}
                         className='contador-margin'  
                         color='danger'>-</Button>
                     <Button color='warning'>Eliminar</Button>

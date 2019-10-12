@@ -6,6 +6,8 @@ function App() {
   return (
     <React.Fragment>
       <Contador titulo='Alpha' numero={0} />
+      <Contador titulo='Omega' numero={5} />
+      <Contador titulo='Gamma' numero={-5} />
     </React.Fragment>
   );
 }
