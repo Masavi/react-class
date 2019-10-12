@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import Contador from './components/Contador';
+import Contadores from './components/Contadores';
 
 function App() {
   return (
     <React.Fragment>
-      <Contador titulo='Alpha' numero={0} />
-      <Contador titulo='Omega' numero={5} />
-      <Contador titulo='Gamma' numero={-5} />
+      <Contadores />
     </React.Fragment>
   );
 }
