@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Articulos from './components/Articulos';
+import CrearArticulo from './components/CrearArticulo';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +20,10 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/articulos">About</Link>
+              <Link to="/articulos">Articulos</Link>
+            </li>
+            <li>
+              <Link to="/crear">Crear Articulo</Link>
             </li>
           </ul>
         </nav>
@@ -28,6 +33,9 @@ function App() {
         <Switch>
           <Route path="/articulos">
               <Articulos />
+          </Route>
+          <Route path="/crear">
+              <CrearArticulo />
           </Route>
         </Switch>
       </div>
