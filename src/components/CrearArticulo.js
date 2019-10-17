@@ -35,7 +35,11 @@ class CrearArticulo extends Component {
         axios.post('http://localhost:4000/api/articulos/', this.state)
             .then(response => {
                 alert('Articulo creado exitosamente')
-                console.log(response)
+                this.setState({
+                    nombre: '',
+                    precio: 0,
+                    existencias: 0,
+                })
             })
             .catch(() => alert('Error al crear Articulo'));
     }
@@ -47,15 +51,15 @@ class CrearArticulo extends Component {
                 <Form>
                     <FormGroup>
                         <Label>Nombre del Artículo</Label>
-                        <Input onChange={this.inputChange} type="text" name="nombre" />
+                        <Input value={this.state.nombre} onChange={this.inputChange} type="text" name="nombre" />
                     </FormGroup>
                     <FormGroup>
                         <Label>Precio del Artículo</Label>
-                        <Input onChange={this.inputChange} type="number" name="precio" />
+                        <Input value={this.state.precio} onChange={this.inputChange} type="number" name="precio" />
                     </FormGroup>
                     <FormGroup>
                         <Label>Existencias del Artículo</Label>
-                        <Input onChange={this.inputChange} type="number" name="existencias" />
+                        <Input value={this.state.existencias} onChange={this.inputChange} type="number" name="existencias" />
                     </FormGroup>
                     <Button onClick={this.submit} color='primary'>Crear</Button>
                 </Form>
