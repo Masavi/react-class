@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import Contadores from './components/Contadores';
+import Articulos from './components/Articulos';
+// import Contadores from './components/Contadores';
 
 function App() {
   return (
     <React.Fragment>
-      <Contadores />
+      <Articulos />
     </React.Fragment>
   );
 }
