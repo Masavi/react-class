@@ -37,7 +37,7 @@ class Contador extends Component {
                     {this.renderizarContador()}
                     <Button onClick={this.incrementar} className="ml-2" color="primary">+</Button>
                     <Button onClick={this.decrementar} className="ml-2" color="danger">-</Button>
-                    <Button className="ml-2" color="warning">Borrar</Button>
+                    <Button onClick={() => this.props.delete(this.props.id)} className="ml-2" color="warning">Borrar</Button>
                 </div>
             </div>
         );

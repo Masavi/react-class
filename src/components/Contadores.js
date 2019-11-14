@@ -11,6 +11,12 @@ class Contadores extends Component {
         ]
     }
 
+    eliminar = (id) => {
+        console.log(`Eliminando al componente con id ${id}`);
+        const contadores = this.state.contadores.filter(contador => contador.id !== id);
+        this.setState({ contadores });
+    }
+
     render() { 
         return (
             <React.Fragment>
@@ -19,8 +25,10 @@ class Contadores extends Component {
                     this.state.contadores.map(contador => {
                         return <Contador
                                     key={contador.id}
+                                    id={contador.id}
                                     contador={contador.contador}
-                                    titulo={contador.titulo} />
+                                    titulo={contador.titulo}
+                                    delete={this.eliminar} />
                     })
                 }
             </React.Fragment>
