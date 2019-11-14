@@ -1,11 +1,11 @@
 import React from 'react';
-import Contador from './components/Contador';
+import Contadores from './components/Contadores';
 import { Container } from 'reactstrap';
 
 function App() {
   return (
     <Container className="pt-4">
-      <Contador />
+      <Contadores />
     </Container>
   );
 }

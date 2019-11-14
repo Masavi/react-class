@@ -3,8 +3,8 @@ import { Button, Badge } from 'reactstrap';
 
 class Contador extends Component {
     state = { 
-        titulo: 'Alpha',
-        contador: 7
+        titulo: this.props.titulo,
+        contador: this.props.contador
     }
 
     incrementar = () => {
@@ -22,12 +22,15 @@ class Contador extends Component {
     }
 
     render() { 
+        console.log("State 🔥", this.state);
+        console.log("Props 🐙", this.props);
         return ( 
             <div style={{
                 backgroundColor: "#8bfcba",
                 width: "250px",
                 padding: "10px",
-                borderRadius: "20px"
+                borderRadius: "20px",
+                marginBottom: "10px"
             }}>
                 <h2>{this.state.titulo}</h2>
                 <div className="d-flex">
