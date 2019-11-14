@@ -22,8 +22,8 @@ class Contador extends Component {
     }
 
     render() { 
-        console.log("State 🔥", this.state);
-        console.log("Props 🐙", this.props);
+        // console.log("State 🔥", this.state);
+        // console.log("Props 🐙", this.props);
         return ( 
             <div style={{
                 backgroundColor: "#8bfcba",
